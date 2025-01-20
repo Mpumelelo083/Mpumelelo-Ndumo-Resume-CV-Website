@@ -1,0 +1,30 @@
+body {
+    background-color: black;
+    font-family: arial;
+    color: white;
+    position: relative;
+}
+
+.profile-picture-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#about-me {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    border: 1px solid white;
+}
+
+#education {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+
+}
+

@@ -1,2 +1,58 @@
+body {
+    color: white;
+    background-color: black;
+    font-family: arial;
+    
+}
 
+.about-profile-picture-section {
+    display: flex;
+    align-items: center;
+}
+
+.profile-picture-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.education-flex {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+.education-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.certificates-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.certificates-list {
+    display: flex;
+    align-items: center;
+}
+
+.skills-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.project-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
 

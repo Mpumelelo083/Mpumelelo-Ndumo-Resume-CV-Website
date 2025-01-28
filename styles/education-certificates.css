@@ -42,16 +42,25 @@
 .certificates-container {
     display: flex;
     flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    background-color: #808F87;
+    background-color: #1c2845;
     width: 50%;
     height: 500px;
     padding: 20px;
-
+    color: rgb(255, 255, 255);
 }
 
 .certificates-list {
     display: flex;
-    align-items: center;
+    align-items: center;    
+    justify-content: space-between;
+}
+
+.view-certificate-button {
+    border: none;
+    color: white;
+    background-color: #9B7E46;
+    font-weight: bold;
+    font-size: 14px;
+    padding: 10px 25px ;
+    border-radius: 5px;
 }

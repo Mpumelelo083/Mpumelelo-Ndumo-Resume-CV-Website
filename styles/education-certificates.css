@@ -1,0 +1,57 @@
+.education-flex {
+    display: flex;
+    align-items: center;
+    justify-content:start;
+    height: 500px;
+}
+
+
+.education-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    background-color: white;
+    width: 50%;
+    height: 497px;
+}
+
+
+.education-container h2 {
+    display: inline-block;
+    margin-bottom: 0px;
+    margin-top: 0px;
+}
+
+.education-container p {
+    display: inline-block;
+    margin-bottom: 0px;
+    font-size: 19px;
+
+}
+
+.vut-logo {
+    width: 200px;
+    height: 100px;
+    object-fit: contain;
+    margin-bottom: 0px;
+    margin-top: 0px;
+}
+
+.certificates-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: #808F87;
+    width: 50%;
+    height: 500px;
+    padding: 20px;
+
+}
+
+.certificates-list {
+    display: flex;
+    align-items: center;
+}

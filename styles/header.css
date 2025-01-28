@@ -2,6 +2,38 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+    position: fixed;
+    background-color: white;
+    z-index: 1;
+    top: 0px;
+    left: 0px;
+    right: 0px;
+    height: 100px;
+}
+
+.left-header p {
+    font-size: 25px;
+    margin-left: 15px;
+}
+
+
+
+.middle-header a {
+    color: black;
+    text-align: center;
+    font-size: 18px;
+    margin-right: 10px;
+}
+
+.download-cv-button {
+    border: none;
+    background-color: #0D1321;
+    color: white;
+    font-weight: bold;
+    border-radius: 5px;
+    margin-right: 15px;
+    padding: 10px 30px;
+
 }
 
 

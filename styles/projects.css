@@ -1,6 +1,24 @@
-.project-container {
+#projects h1 {
+    text-align: center;
+}
+
+.projects-card {
     display: flex;
-    flex-direction: column;
     justify-content: center;
-    align-items: center;
+}
+
+.project-container {
+    border: 1px solid black;
+    padding: 20px;
+    width: 550px;
+    margin-right: 25px;
+}
+
+.view-download-project button {
+    padding: 10px 20px;
+    border: none;
+    font-weight: bold;
+    background-color: #d59245;
+    border-radius: 5px;
+    color: white;
 }

@@ -3,5 +3,15 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    background-color: bisque;
+    background-color: #F4B266;
+    padding: 20px;
+    font-size: 17px;
 }
+
+.skills-container b {
+    text-decoration: underline;
+}
+
+
+
+

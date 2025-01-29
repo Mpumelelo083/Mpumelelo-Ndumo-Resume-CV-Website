@@ -3,9 +3,12 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    background-color: #F4B266;
+    background-color: #9B7E46;
     padding: 20px;
     font-size: 17px;
+    color: white;
+    box-shadow: 0 6px 10px 0 rgba(0, 0, 0, 0.2);
+
 }
 
 .skills-container b {

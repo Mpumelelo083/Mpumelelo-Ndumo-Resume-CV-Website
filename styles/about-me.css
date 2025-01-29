@@ -4,6 +4,7 @@
     align-items: center;
     height: 400px;
     padding: 20px 0px;
+    margin-bottom: 50px;
 }
 
 .profile-picture-section {
@@ -12,6 +13,8 @@
     align-items: center;
     width: 50%;
     padding: 16px 0px;
+    box-shadow: 0 6px 10px 0 rgba(0, 0, 0, 0.2);
+/*if ever things appear weird add white background colour*/
 }
 
 .profile-picture {
@@ -28,6 +31,12 @@
 
 .social-media-icons {
     width: 50px;
+    margin-right: 10px;
+    transition: transform 0.5s;
+}
+
+.social-media-icons:hover {
+    transform: scale(1.2);
 }
 
 #about-me {
@@ -35,6 +44,8 @@
     height: 100%;
     padding: 0px 15px;
     text-align: center;
+    box-shadow: 0 6px 10px 0 rgba(0, 0, 0, 0.2);
+
 }
 
 #about-me h1 {

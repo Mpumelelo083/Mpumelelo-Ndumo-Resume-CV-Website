@@ -1,8 +1,7 @@
 .education-flex {
     display: flex;
     align-items: center;
-    justify-content:start;
-    height: 500px;
+    justify-content:space-between;
     margin-bottom: 50px;
 }
 
@@ -13,8 +12,7 @@
     align-items: center;
     justify-content: center;
     padding: 20px;
-    width: 50%;
-    height: 497px;
+    width: 40%;
     box-shadow: 0 6px 10px 0 rgba(0, 0, 0, 0.2);
 
 }
@@ -46,10 +44,10 @@
     flex-direction: column;
     background-color: #1c2845;
     width: 50%;
-    height: 500px;
-    padding: 20px;
+    padding: 30px;
     color: rgb(255, 255, 255);
     box-shadow: 0 6px 10px 0 rgba(0, 0, 0, 0.2);
+    margin-top: 50px;
 
 }
 

@@ -1,5 +1,4 @@
 .about-profile-picture-section {
-    margin-top: 100px;
     display: flex;
     align-items: center;
     padding: 20px 0px;
@@ -10,8 +9,7 @@
     flex-direction: column;
     align-items: center;
     width: 50%;
-    height: fit-content;
-    padding: 16px 0px;
+    padding: 17px 0px;
     box-shadow: 0 6px 10px 0 rgba(0, 0, 0, 0.2);
 /*if ever things appear weird add white background colour*/
 }
@@ -63,4 +61,48 @@
 
 .about-paragraph {
     font-size: 17px;
+}
+
+@media (max-width: 768px) {
+    .about-profile-picture-section {
+        flex-direction: column;
+        margin-top: 50px;
+        margin-bottom: 10px;
+    }
+
+    .profile-picture-section {
+        width: 100%;
+        margin-bottom: 10px;
+
+    }
+
+    #about-me {
+        width: 95%;
+        padding: 8px;
+    }
+
+    .profile-picture {
+        width: 120px;
+        height: 120px;
+    }
+
+    .line-under-picture {
+        width: 80%;
+    }
+
+    .social-media-icons {
+        width: 40px;
+    }
+
+    #about-me h1 {
+        font-size: 35px;
+    }
+
+    #about-me h2 {
+        font-size: 25px;
+    }
+
+    .about-paragraph {
+        font-size: 15px;
+    }
 }

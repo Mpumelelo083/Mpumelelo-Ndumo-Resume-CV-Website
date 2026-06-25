@@ -8,7 +8,7 @@
         <!-- Google Fonts: Inter -->
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
 
         <!-- Tailwind CSS CDN & Config -->
         <script src="https://cdn.tailwindcss.com"></script>
@@ -20,9 +20,12 @@
                             sans: ['Inter', 'sans-serif'],
                         },
                         colors: {
-                            zinc: {
-                                850: '#1f1f22',
-                                950: '#09090b',
+                            lavender: {
+                                base: '#fde2ffff', // Light Background / Section Tints (Lavender Veil)
+                                text: '#5d576b',   // Deep Neutral / Text / Dark Elements (Taupe Grey)
+                                accent: '#8884ff', // Vibrant Accent / Buttons / Highlights (Soft Periwinkle)
+                                shade1: '#d7bce8', // Soft Accent Shading (Thistle)
+                                shade2: '#e8cee4', // Secondary Accent Shading (Thistle-2)
                             }
                         }
                     }
@@ -37,7 +40,7 @@
                     @apply bg-transparent border-b border-transparent transition-all duration-300;
                 }
                 .header.scrolled {
-                    @apply backdrop-blur-md bg-zinc-950/80 shadow-lg border-b border-zinc-800 py-3;
+                    @apply backdrop-blur-md bg-white/80 shadow-sm border-b border-lavender-shade2 py-3;
                 }
                 .fade-in {
                     @apply opacity-0 translate-y-6 transition-all duration-700 ease-out;
@@ -51,27 +54,29 @@
         <script src="scripts/main.js" defer></script>
     </head>
 
-    <body class="bg-zinc-950 text-zinc-400 font-sans antialiased selection:bg-emerald-500/30 selection:text-emerald-200">
+    <!-- Update body classes: light background, deep neutral text -->
+    <body class="bg-lavender-base text-lavender-text font-sans antialiased selection:bg-lavender-accent/30 selection:text-lavender-accent">
         
         <header class="header fixed top-0 w-full z-50 py-5">
             <div class="max-w-7xl mx-auto px-6 md:px-12 flex flex-wrap items-center justify-between gap-4">
                 <div class="left-header flex-shrink-0">
-                    <p class="text-sm tracking-wide text-zinc-300">
-                        <b class="text-emerald-400">&#9711; Mpumelelo Ndumo <span class="text-zinc-600">/</span></b> 
+                    <p class="text-sm tracking-wide text-lavender-text font-medium">
+                        <b class="text-lavender-accent">&#9711; Mpumelelo Ndumo <span class="text-lavender-shade1">/</span></b> 
                         <span class="hidden sm:inline">Information Technology Graduate</span>
                     </p>
                 </div>
 
-                <nav class="middle-header hidden md:flex items-center gap-8 text-sm font-medium">
-                    <a href="#about-me" class="hover:text-emerald-400 transition-colors">About Me</a>
-                    <a href="#" class="hover:text-emerald-400 transition-colors">Resume</a>
-                    <a href="#projects" class="hover:text-emerald-400 transition-colors">Projects</a>
-                    <a href="#skills" class="hover:text-emerald-400 transition-colors">Skills</a>
+                <nav class="middle-header hidden md:flex items-center gap-8 text-sm font-semibold">
+                    <a href="#about-me" class="hover:text-lavender-accent transition-colors">About Me</a>
+                    <a href="#experience" class="hover:text-lavender-accent transition-colors">Experience</a>
+                    <a href="#" class="hover:text-lavender-accent transition-colors">Resume</a>
+                    <a href="#projects" class="hover:text-lavender-accent transition-colors">Projects</a>
+                    <a href="#skills" class="hover:text-lavender-accent transition-colors">Skills</a>
                 </nav>
 
                 <div class="right-header">
                     <a href="files/Mpumelelo Ndumo Curriculum Vitae.pdf" target="_blank" class="inline-block">
-                        <button class="download-cv-button text-xs font-semibold tracking-wider uppercase px-5 py-2.5 rounded-full bg-emerald-500/10 text-emerald-400 border border-emerald-500/30 hover:bg-emerald-500 hover:text-zinc-950 transition-all duration-300">
+                        <button class="download-cv-button text-xs font-bold tracking-wider uppercase px-5 py-2.5 rounded-full bg-lavender-accent/10 text-lavender-accent border border-lavender-accent hover:bg-lavender-accent hover:text-white transition-all duration-300 shadow-sm">
                             DOWNLOAD CV
                         </button>
                     </a>
@@ -86,176 +91,205 @@
                 
                 <section class="profile-picture-section lg:col-span-5 flex flex-col items-center lg:items-start text-center lg:text-left order-2 lg:order-1">
                     <section id="about-me" class="w-full">
-                        <h1 class="text-emerald-500 font-semibold tracking-widest uppercase text-sm mb-4">About Me</h1>
-                        <h2 class="text-4xl md:text-5xl font-bold text-zinc-100 mb-3 tracking-tight">Hello</h2>
-                        <h3 class="text-xl md:text-2xl text-zinc-300 mb-8 font-light">Here's who I am and what I do.</h3>
+                        <h1 class="text-lavender-accent font-bold tracking-widest uppercase text-sm mb-4">About Me</h1>
+                        <h2 class="text-4xl md:text-5xl font-extrabold text-lavender-text mb-3 tracking-tight">Hello</h2>
+                        <h3 class="text-xl md:text-2xl text-lavender-text/80 mb-8 font-medium">Here's who I am and what I do.</h3>
                         
-                        <div class="about-paragraph space-y-6 text-zinc-400 leading-relaxed text-lg">
-                            <p>
-                                I am a recent graduate from the Vaal University of Technology with a diploma in Information Technology, majoring in 
-                                Software Development, Business Analysis, and Web Development. I hold multiple certifications from Cisco Networking 
-                                Academy and SoloLearn, showcasing my skills in networking, web development, and IT systems.
-                            </p>
-                            <p>
-                                I am actively seeking internship and graduate program opportunities where I can apply my technical skills, grow professionally, and contribute to 
-                                innovative projects. Currently, I am developing a resume portfolio website to highlight my achievements and technical abilities.
-                            </p>
-                            <p>
-                                My goal is to expand my knowledge in the tech industry, continue learning, and make a positive impact as I build my career in IT.
-                            </p>
+                        <div class="about-paragraph space-y-6 text-lavender-text leading-relaxed text-lg font-normal">
+                            <p>I am a Cybersecurity & DevOps Intern at Hosi Technologies, gaining hands on experience across cybersecurity consulting, governance & compliance (GRC), DevOps, and enterprise software solutions.</p>
+                            <p>My work involves contributing to internal and client focused projects, including learning management systems (LMS), system modernization initiatives, and collaborative technology solutions within enterprise environments.</p>
+                            <p>I have also been involved in projects focused on transforming legacy monolithic systems into more modern and scalable architectures while working alongside multidisciplinary teams.</p>
+                            <p>Through my internship, I continue building practical experience in cybersecurity governance, DevOps practices, enterprise systems, software development workflows, and IT service management.</p>
+                            <p>I am passionate about technology, continuous learning, and building secure, scalable, and efficient digital solutions.</p>
                         </div>
                     </section>
                 </section>
 
                 <section class="lg:col-span-7 flex flex-col items-center justify-center relative order-1 lg:order-2">
                     <!-- Decorative background element -->
-                    <div class="absolute inset-0 bg-gradient-to-tr from-emerald-500/20 to-transparent blur-3xl -z-10 rounded-full scale-75"></div>
+                    <div class="absolute inset-0 bg-gradient-to-tr from-lavender-shade2 to-transparent blur-3xl -z-10 rounded-full scale-75 opacity-70"></div>
                     
                     <div class="relative group">
-                        <div class="absolute -inset-1 bg-gradient-to-r from-emerald-500 to-indigo-500 rounded-2xl blur opacity-25 group-hover:opacity-50 transition duration-1000 group-hover:duration-200"></div>
-                        <img class="profile-picture relative w-64 h-64 md:w-80 md:h-80 object-cover rounded-2xl shadow-2xl border border-zinc-800/50 grayscale hover:grayscale-0 transition-all duration-500" src="icons/Me.jpg" alt="Mpumelelo Ndumo">
+                        <div class="absolute -inset-1 bg-gradient-to-r from-lavender-shade1 to-lavender-shade2 rounded-2xl blur opacity-60 group-hover:opacity-100 transition duration-1000 group-hover:duration-200"></div>
+                        <img class="profile-picture relative w-64 h-64 md:w-80 md:h-80 object-cover rounded-2xl shadow-xl border border-white/50 grayscale hover:grayscale-0 transition-all duration-500" src="icons/Me.jpg" alt="Mpumelelo Ndumo">
                     </div>
                     
                     <div class="mt-8 flex flex-col items-center">
-                        <p class="professional-title text-2xl font-bold text-zinc-100 tracking-wide">MPUMELELO NDUMO</p>
-                        <img class="line-under-picture w-16 h-1 my-3 opacity-50" src="icons/line-solid-svgrepo-com.svg" alt="Line">
-                        <p class="professional-title text-sm font-medium tracking-widest text-emerald-400 uppercase">ASPIRING SOFTWARE / WEB DEVELOPER</p>
+                        <p class="professional-title text-2xl font-extrabold text-lavender-text tracking-wide">MPUMELELO NDUMO</p>
+                        <img class="line-under-picture w-16 h-1 my-3 opacity-30 invert" src="icons/line-solid-svgrepo-com.svg" alt="Line" style="filter: brightness(0) invert(40%) sepia(10%) saturate(1000%) hue-rotate(220deg);">
+                        <p class="professional-title text-sm font-bold tracking-widest text-lavender-accent uppercase">ASPIRING SOFTWARE / WEB DEVELOPER</p>
                     </div>
     
                     <div class="social-media-container flex gap-6 mt-8">
-                        <a href="https://github.com/Mpumelelo083" target="_blank" class="p-3 bg-zinc-900 border border-zinc-800 rounded-full hover:border-emerald-500 hover:bg-zinc-800 hover:-translate-y-1 transition-all duration-300 group">
-                            <img class="social-media-icons w-6 h-6 opacity-70 group-hover:opacity-100 invert transition-opacity" src="icons/github-svgrepo-com.svg" alt="GitHub">
+                        <a href="https://github.com/Mpumelelo083" target="_blank" class="p-3 bg-white/50 border border-lavender-shade2 rounded-full hover:border-lavender-accent hover:bg-white hover:-translate-y-1 shadow-sm transition-all duration-300 group">
+                            <img class="social-media-icons w-6 h-6 opacity-80 group-hover:opacity-100 transition-opacity" src="icons/github-svgrepo-com.svg" alt="GitHub" style="filter: invert(30%) sepia(10%) saturate(1000%) hue-rotate(220deg);">
                         </a>
-                        <a href="https://www.linkedin.com/in/mpumelelo-ndumo-296059344/" target="_blank" class="p-3 bg-zinc-900 border border-zinc-800 rounded-full hover:border-emerald-500 hover:bg-zinc-800 hover:-translate-y-1 transition-all duration-300 group">
-                            <img class="social-media-icons w-6 h-6 opacity-70 group-hover:opacity-100 invert transition-opacity" src="icons/linked-in-logo-of-two-letters-svgrepo-com.svg" alt="LinkedIn">
+                        <a href="https://www.linkedin.com/in/mpumelelo-ndumo-296059344/" target="_blank" class="p-3 bg-white/50 border border-lavender-shade2 rounded-full hover:border-lavender-accent hover:bg-white hover:-translate-y-1 shadow-sm transition-all duration-300 group">
+                            <img class="social-media-icons w-6 h-6 opacity-80 group-hover:opacity-100 transition-opacity" src="icons/linked-in-logo-of-two-letters-svgrepo-com.svg" alt="LinkedIn" style="filter: invert(30%) sepia(10%) saturate(1000%) hue-rotate(220deg);">
                         </a>
                     </div>
                 </section>
                 
             </div>
 
-            <hr class="border-zinc-800/50">
+            <hr class="border-lavender-shade2">
+
+            <!-- EXPERIENCE -->
+            <section id="experience" class="fade-in">
+                <h1 class="text-3xl font-extrabold text-lavender-text mb-10 flex items-center gap-3">
+                    <span class="w-8 h-[3px] bg-lavender-accent block rounded-full"></span> Experience
+                </h1>
+
+                <div class="flex flex-col gap-8">
+                    <div class="bg-white/60 border border-lavender-shade2 p-8 rounded-3xl shadow-sm hover:shadow-md hover:border-lavender-shade1 transition-all duration-300 relative overflow-hidden group">
+                        <div class="absolute top-0 right-0 w-32 h-32 bg-lavender-accent/10 blur-3xl group-hover:bg-lavender-accent/20 transition-colors duration-500"></div>
+                        <div class="relative z-10">
+                            <div class="flex flex-col md:flex-row md:items-center justify-between mb-6">
+                                <div>
+                                    <h3 class="text-2xl font-bold text-lavender-text">Cybersecurity & DevOps Intern</h3>
+                                    <p class="text-lavender-accent font-semibold text-lg mt-1">Hosi Technologies</p>
+                                </div>
+                                <div class="mt-4 md:mt-0 text-sm font-bold tracking-wider text-lavender-text bg-lavender-shade2/40 px-5 py-2 rounded-full inline-block shadow-inner border border-lavender-shade1/50">
+                                    November 2025 - Present
+                                </div>
+                            </div>
+                            <ul class="list-disc list-outside ml-6 space-y-3 text-lavender-text leading-relaxed font-medium">
+                                <li>Supporting cybersecurity consulting and governance-related initiatives within enterprise environments.</li>
+                                <li>Assisting with GRC activities including documentation, governance processes, and compliance-focused tasks.</li>
+                                <li>Contributing to enterprise software and internal platform development projects, including learning management systems (LMS).</li>
+                                <li>Participating in system modernization initiatives involving the transition from legacy monolithic architectures to more scalable modern solutions.</li>
+                                <li>Collaborating with multidisciplinary teams across cybersecurity, DevOps, consulting, and software development functions.</li>
+                                <li>Applying ITIL 4 and operational best practices within technical and service-driven environments.</li>
+                                <li>Supporting technical problem-solving, solution development, testing, and implementation activities across different project requirements.</li>
+                                <li>Gaining exposure to modern development workflows, scalable systems, and enterprise technology operations.</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <hr class="border-lavender-shade2">
 
             <!-- EDUCATION & CERTIFICATES -->
             <section id="education" class="fade-in">
                 <div class="education-flex grid grid-cols-1 lg:grid-cols-12 gap-16">
                     
-                    <div class="education-container lg:col-span-4 flex flex-col bg-zinc-900/50 border border-zinc-800/50 p-8 rounded-3xl relative overflow-hidden group">
-                        <div class="absolute top-0 right-0 w-32 h-32 bg-emerald-500/10 blur-3xl group-hover:bg-emerald-500/20 transition-colors duration-500"></div>
-                        <h1 class="text-3xl font-bold text-zinc-100 mb-8 flex items-center gap-3">
-                            <span class="w-8 h-[2px] bg-emerald-500 block"></span> Education
+                    <div class="education-container lg:col-span-4 flex flex-col bg-white/60 border border-lavender-shade2 p-8 rounded-3xl relative overflow-hidden group shadow-sm hover:shadow-md transition-shadow">
+                        <div class="absolute top-0 right-0 w-32 h-32 bg-lavender-shade1/30 blur-3xl group-hover:bg-lavender-shade1/50 transition-colors duration-500"></div>
+                        <h1 class="text-3xl font-extrabold text-lavender-text mb-8 flex items-center gap-3">
+                            <span class="w-8 h-[3px] bg-lavender-accent block rounded-full"></span> Education
                         </h1>
-                        <img class="vut-logo h-16 w-auto object-contain mb-8 filter grayscale opacity-80 group-hover:grayscale-0 group-hover:opacity-100 transition-all" src="icons/VUT_logo-TM.png" alt="VUT Logo">
+                        <img class="vut-logo h-16 w-auto object-contain mb-8 filter opacity-90 group-hover:opacity-100 transition-all" src="icons/VUT_logo-TM.png" alt="VUT Logo">
                         
-                        <div class="space-y-6 text-zinc-400">
+                        <div class="space-y-6 text-lavender-text font-medium">
                             <div>
-                                <h2 class="text-sm uppercase tracking-widest text-emerald-500 font-semibold mb-1">Institution:</h2>
-                                <p class="text-zinc-200 font-medium text-lg">Vaal University of Technology</p>
+                                <h2 class="text-sm uppercase tracking-widest text-lavender-accent font-bold mb-1">Institution:</h2>
+                                <p class="text-lavender-text font-bold text-lg">Vaal University of Technology</p>
                             </div>
                             <div>
-                                <h2 class="text-sm uppercase tracking-widest text-emerald-500 font-semibold mb-1">Diploma:</h2>
-                                <p class="text-zinc-200">Information Technology</p>
+                                <h2 class="text-sm uppercase tracking-widest text-lavender-accent font-bold mb-1">Diploma:</h2>
+                                <p class="text-lavender-text">Information Technology</p>
                             </div>
                             <div>
-                                <h2 class="text-sm uppercase tracking-widest text-emerald-500 font-semibold mb-2">Majors:</h2>
-                                <ul class="list-disc list-inside space-y-1 text-zinc-300">
+                                <h2 class="text-sm uppercase tracking-widest text-lavender-accent font-bold mb-2">Majors:</h2>
+                                <ul class="list-disc list-inside space-y-1 text-lavender-text">
                                     <li>Development Software</li>
                                     <li>Information Systems</li>
                                     <li>Business Analysis</li>
                                     <li>Web Development</li>
                                 </ul>
                             </div>
-                            <div class="pt-2 border-t border-zinc-800/50">
-                                <h2 class="text-sm uppercase tracking-widest text-emerald-500 font-semibold mb-1">Year of Completion:</h2>
-                                <p class="text-zinc-200 font-medium">2024</p>
+                            <div class="pt-2 border-t border-lavender-shade2">
+                                <h2 class="text-sm uppercase tracking-widest text-lavender-accent font-bold mb-1">Year of Completion:</h2>
+                                <p class="text-lavender-text font-bold">2024</p>
                             </div>
                         </div>
                     </div>
                     
                     <div class="certificates-container lg:col-span-8">
-                        <h1 class="text-3xl font-bold text-zinc-100 mb-8 flex items-center gap-3">
-                            <span class="w-8 h-[2px] bg-emerald-500 block"></span> Certificates
+                        <h1 class="text-3xl font-extrabold text-lavender-text mb-8 flex items-center gap-3">
+                            <span class="w-8 h-[3px] bg-lavender-accent block rounded-full"></span> Certificates
                         </h1>
     
                         <div class="certificates-grid grid grid-cols-1 sm:grid-cols-2 gap-4">
                             <!-- Certificate Card 1 -->
-                            <div class="certificates-list bg-zinc-900 border border-zinc-800 p-6 rounded-2xl hover:border-emerald-500/50 hover:bg-zinc-800/80 transition-all duration-300 flex flex-col justify-between group">
-                                <p class="text-zinc-300 mb-6 font-medium leading-snug flex items-start gap-2">
-                                    <span class="text-emerald-500 text-lg leading-none mt-0.5">&#9734;</span> 
+                            <div class="certificates-list bg-white/60 border border-lavender-shade2 p-6 rounded-2xl hover:border-lavender-accent hover:bg-white hover:shadow-sm transition-all duration-300 flex flex-col justify-between group">
+                                <p class="text-lavender-text mb-6 font-semibold leading-snug flex items-start gap-2">
+                                    <span class="text-lavender-accent text-lg leading-none mt-0.5">&#9734;</span> 
                                     Introduction to HTML - SoloLearn
                                 </p>
                                 <a href="files/Introduction to HTML.pdf" target="_blank" class="mt-auto">
-                                    <button class="view-certificate-button w-full text-sm font-medium py-2 rounded-lg bg-zinc-800 text-zinc-300 group-hover:bg-emerald-500 group-hover:text-zinc-950 transition-colors">View Certificate</button>
+                                    <button class="view-certificate-button w-full text-sm font-bold py-2.5 rounded-lg bg-lavender-shade2/30 text-lavender-text border border-lavender-shade2 group-hover:bg-lavender-accent group-hover:text-white group-hover:border-lavender-accent transition-all duration-300">View Certificate</button>
                                 </a>
                             </div> 
                             <!-- Certificate Card 2 -->
-                            <div class="certificates-list bg-zinc-900 border border-zinc-800 p-6 rounded-2xl hover:border-emerald-500/50 hover:bg-zinc-800/80 transition-all duration-300 flex flex-col justify-between group">
-                                <p class="text-zinc-300 mb-6 font-medium leading-snug flex items-start gap-2">
-                                    <span class="text-emerald-500 text-lg leading-none mt-0.5">&#9734;</span> 
+                            <div class="certificates-list bg-white/60 border border-lavender-shade2 p-6 rounded-2xl hover:border-lavender-accent hover:bg-white hover:shadow-sm transition-all duration-300 flex flex-col justify-between group">
+                                <p class="text-lavender-text mb-6 font-semibold leading-snug flex items-start gap-2">
+                                    <span class="text-lavender-accent text-lg leading-none mt-0.5">&#9734;</span> 
                                     Introduction to CSS - SoloLearn
                                 </p>
                                 <a href="files/Introduction to CSS.pdf" target="_blank" class="mt-auto">
-                                    <button class="view-certificate-button w-full text-sm font-medium py-2 rounded-lg bg-zinc-800 text-zinc-300 group-hover:bg-emerald-500 group-hover:text-zinc-950 transition-colors">View Certificate</button>
+                                    <button class="view-certificate-button w-full text-sm font-bold py-2.5 rounded-lg bg-lavender-shade2/30 text-lavender-text border border-lavender-shade2 group-hover:bg-lavender-accent group-hover:text-white group-hover:border-lavender-accent transition-all duration-300">View Certificate</button>
                                 </a>
                             </div>      
                             <!-- Certificate Card 3 -->
-                            <div class="certificates-list bg-zinc-900 border border-zinc-800 p-6 rounded-2xl hover:border-emerald-500/50 hover:bg-zinc-800/80 transition-all duration-300 flex flex-col justify-between group">
-                                <p class="text-zinc-300 mb-6 font-medium leading-snug flex items-start gap-2">
-                                    <span class="text-emerald-500 text-lg leading-none mt-0.5">&#9734;</span> 
+                            <div class="certificates-list bg-white/60 border border-lavender-shade2 p-6 rounded-2xl hover:border-lavender-accent hover:bg-white hover:shadow-sm transition-all duration-300 flex flex-col justify-between group">
+                                <p class="text-lavender-text mb-6 font-semibold leading-snug flex items-start gap-2">
+                                    <span class="text-lavender-accent text-lg leading-none mt-0.5">&#9734;</span> 
                                     Introduction to Python - SoloLearn
                                 </p>
                                 <a href="files/Introduction to Python.pdf" target="_blank" class="mt-auto">
-                                    <button class="view-certificate-button w-full text-sm font-medium py-2 rounded-lg bg-zinc-800 text-zinc-300 group-hover:bg-emerald-500 group-hover:text-zinc-950 transition-colors">View Certificate</button>
+                                    <button class="view-certificate-button w-full text-sm font-bold py-2.5 rounded-lg bg-lavender-shade2/30 text-lavender-text border border-lavender-shade2 group-hover:bg-lavender-accent group-hover:text-white group-hover:border-lavender-accent transition-all duration-300">View Certificate</button>
                                 </a>
                             </div>      
                             <!-- Certificate Card 4 -->
-                            <div class="certificates-list bg-zinc-900 border border-zinc-800 p-6 rounded-2xl hover:border-emerald-500/50 hover:bg-zinc-800/80 transition-all duration-300 flex flex-col justify-between group">
-                                <p class="text-zinc-300 mb-6 font-medium leading-snug flex items-start gap-2">
-                                    <span class="text-emerald-500 text-lg leading-none mt-0.5">&#9734;</span> 
+                            <div class="certificates-list bg-white/60 border border-lavender-shade2 p-6 rounded-2xl hover:border-lavender-accent hover:bg-white hover:shadow-sm transition-all duration-300 flex flex-col justify-between group">
+                                <p class="text-lavender-text mb-6 font-semibold leading-snug flex items-start gap-2">
+                                    <span class="text-lavender-accent text-lg leading-none mt-0.5">&#9734;</span> 
                                     JavaScript Essentials 1 - Cisco Networking Academy
                                 </p>
                                 <a href="files/JavaScript Certificate.pdf" target="_blank" class="mt-auto">
-                                    <button class="view-certificate-button w-full text-sm font-medium py-2 rounded-lg bg-zinc-800 text-zinc-300 group-hover:bg-emerald-500 group-hover:text-zinc-950 transition-colors">View Certificate</button>
+                                    <button class="view-certificate-button w-full text-sm font-bold py-2.5 rounded-lg bg-lavender-shade2/30 text-lavender-text border border-lavender-shade2 group-hover:bg-lavender-accent group-hover:text-white group-hover:border-lavender-accent transition-all duration-300">View Certificate</button>
                                 </a>
                             </div>      
                             <!-- Certificate Card 5 -->
-                            <div class="certificates-list bg-zinc-900 border border-zinc-800 p-6 rounded-2xl hover:border-emerald-500/50 hover:bg-zinc-800/80 transition-all duration-300 flex flex-col justify-between group">
-                                <p class="text-zinc-300 mb-6 font-medium leading-snug flex items-start gap-2">
-                                    <span class="text-emerald-500 text-lg leading-none mt-0.5">&#9734;</span> 
+                            <div class="certificates-list bg-white/60 border border-lavender-shade2 p-6 rounded-2xl hover:border-lavender-accent hover:bg-white hover:shadow-sm transition-all duration-300 flex flex-col justify-between group">
+                                <p class="text-lavender-text mb-6 font-semibold leading-snug flex items-start gap-2">
+                                    <span class="text-lavender-accent text-lg leading-none mt-0.5">&#9734;</span> 
                                     CCNAV7: Introduction to Networks - Vaal University of Technology
                                 </p>
                                 <a href="files/CCNA-_Introduction_to_Networks_certificate.pdf" target="_blank" class="mt-auto">
-                                    <button class="view-certificate-button w-full text-sm font-medium py-2 rounded-lg bg-zinc-800 text-zinc-300 group-hover:bg-emerald-500 group-hover:text-zinc-950 transition-colors">View Certificate</button>
+                                    <button class="view-certificate-button w-full text-sm font-bold py-2.5 rounded-lg bg-lavender-shade2/30 text-lavender-text border border-lavender-shade2 group-hover:bg-lavender-accent group-hover:text-white group-hover:border-lavender-accent transition-all duration-300">View Certificate</button>
                                 </a>
                             </div>      
                             <!-- Certificate Card 6 -->
-                            <div class="certificates-list bg-zinc-900 border border-zinc-800 p-6 rounded-2xl hover:border-emerald-500/50 hover:bg-zinc-800/80 transition-all duration-300 flex flex-col justify-between group">
-                                <p class="text-zinc-300 mb-6 font-medium leading-snug flex items-start gap-2">
-                                    <span class="text-emerald-500 text-lg leading-none mt-0.5">&#9734;</span> 
+                            <div class="certificates-list bg-white/60 border border-lavender-shade2 p-6 rounded-2xl hover:border-lavender-accent hover:bg-white hover:shadow-sm transition-all duration-300 flex flex-col justify-between group">
+                                <p class="text-lavender-text mb-6 font-semibold leading-snug flex items-start gap-2">
+                                    <span class="text-lavender-accent text-lg leading-none mt-0.5">&#9734;</span> 
                                     IT ESSENTIALS: PC Hardware and Software - Vaal University of Technology
                                 </p>
                                 <a href="files/IT_Essentials_certificate.pdf" target="_blank" class="mt-auto">
-                                    <button class="view-certificate-button w-full text-sm font-medium py-2 rounded-lg bg-zinc-800 text-zinc-300 group-hover:bg-emerald-500 group-hover:text-zinc-950 transition-colors">View Certificate</button>
+                                    <button class="view-certificate-button w-full text-sm font-bold py-2.5 rounded-lg bg-lavender-shade2/30 text-lavender-text border border-lavender-shade2 group-hover:bg-lavender-accent group-hover:text-white group-hover:border-lavender-accent transition-all duration-300">View Certificate</button>
                                 </a>
                             </div>      
                             <!-- Certificate Card 7 -->
-                            <div class="certificates-list bg-zinc-900 border border-zinc-800 p-6 rounded-2xl hover:border-emerald-500/50 hover:bg-zinc-800/80 transition-all duration-300 flex flex-col justify-between group">
-                                <p class="text-zinc-300 mb-6 font-medium leading-snug flex items-start gap-2">
-                                    <span class="text-emerald-500 text-lg leading-none mt-0.5">&#9734;</span> 
+                            <div class="certificates-list bg-white/60 border border-lavender-shade2 p-6 rounded-2xl hover:border-lavender-accent hover:bg-white hover:shadow-sm transition-all duration-300 flex flex-col justify-between group">
+                                <p class="text-lavender-text mb-6 font-semibold leading-snug flex items-start gap-2">
+                                    <span class="text-lavender-accent text-lg leading-none mt-0.5">&#9734;</span> 
                                     CCNAV7: Switching, Routing and Wireless Essentials - Vaal University of Technology
                                 </p>
                                 <a href="files/CCNA-_Switching-_Routing-_and_Wireless_Essentials_certificate.pdf" target="_blank" class="mt-auto">
-                                    <button class="view-certificate-button w-full text-sm font-medium py-2 rounded-lg bg-zinc-800 text-zinc-300 group-hover:bg-emerald-500 group-hover:text-zinc-950 transition-colors">View Certificate</button>
+                                    <button class="view-certificate-button w-full text-sm font-bold py-2.5 rounded-lg bg-lavender-shade2/30 text-lavender-text border border-lavender-shade2 group-hover:bg-lavender-accent group-hover:text-white group-hover:border-lavender-accent transition-all duration-300">View Certificate</button>
                                 </a>
                             </div>      
                             <!-- Certificate Card 8 -->
-                            <div class="certificates-list bg-zinc-900 border border-zinc-800 p-6 rounded-2xl hover:border-emerald-500/50 hover:bg-zinc-800/80 transition-all duration-300 flex flex-col justify-between group">
-                                <p class="text-zinc-300 mb-6 font-medium leading-snug flex items-start gap-2">
-                                    <span class="text-emerald-500 text-lg leading-none mt-0.5">&#9734;</span> 
+                            <div class="certificates-list bg-white/60 border border-lavender-shade2 p-6 rounded-2xl hover:border-lavender-accent hover:bg-white hover:shadow-sm transition-all duration-300 flex flex-col justify-between group">
+                                <p class="text-lavender-text mb-6 font-semibold leading-snug flex items-start gap-2">
+                                    <span class="text-lavender-accent text-lg leading-none mt-0.5">&#9734;</span> 
                                     Python for Beginners: Learn Python Programming (Python 3) - Udemy
                                 </p>
                                 <a href="files/Python Certificate.pdf" target="_blank" class="mt-auto">
-                                    <button class="view-certificate-button w-full text-sm font-medium py-2 rounded-lg bg-zinc-800 text-zinc-300 group-hover:bg-emerald-500 group-hover:text-zinc-950 transition-colors">View Certificate</button>
+                                    <button class="view-certificate-button w-full text-sm font-bold py-2.5 rounded-lg bg-lavender-shade2/30 text-lavender-text border border-lavender-shade2 group-hover:bg-lavender-accent group-hover:text-white group-hover:border-lavender-accent transition-all duration-300">View Certificate</button>
                                 </a>
                             </div>                      
                         </div>
@@ -263,70 +297,70 @@
                 </div>
             </section>
 
-            <hr class="border-zinc-800/50">
+            <hr class="border-lavender-shade2">
 
             <!-- SKILLS -->
             <section id="skills" class="fade-in">
                 <div class="skills-container max-w-4xl mx-auto">
-                    <h1 class="text-3xl font-bold text-zinc-100 mb-10 flex items-center justify-center gap-3">
-                        <span class="w-8 h-[2px] bg-emerald-500 block"></span> Skills <span class="w-8 h-[2px] bg-emerald-500 block"></span>
+                    <h1 class="text-3xl font-extrabold text-lavender-text mb-10 flex items-center justify-center gap-3">
+                        <span class="w-8 h-[3px] bg-lavender-accent block rounded-full"></span> Skills <span class="w-8 h-[3px] bg-lavender-accent block rounded-full"></span>
                     </h1>
                     
                     <div class="grid grid-cols-1 md:grid-cols-2 gap-x-8 gap-y-6">
-                        <div class="flex items-start gap-4 p-4 rounded-xl hover:bg-zinc-900/50 transition-colors">
-                            <div class="w-1.5 h-1.5 rounded-full bg-emerald-500 mt-2 flex-shrink-0 shadow-[0_0_8px_rgba(16,185,129,0.8)]"></div>
-                            <p class="text-zinc-300 leading-relaxed text-sm md:text-base"><b class="text-zinc-100">HTML, CSS, and JavaScript:</b> Proficient in creating responsive and interactive websites, backed by coursework, project and certifications.</p>
+                        <div class="flex items-start gap-4 p-4 rounded-xl bg-white/40 border border-transparent hover:border-lavender-shade1 hover:bg-white/80 transition-all duration-300 shadow-sm">
+                            <div class="w-2 h-2 rounded-full bg-lavender-accent mt-1.5 flex-shrink-0 shadow-[0_0_6px_rgba(136,132,255,0.6)]"></div>
+                            <p class="text-lavender-text leading-relaxed text-sm md:text-base font-medium"><b class="font-extrabold text-lavender-text">HTML, CSS, and JavaScript:</b> Proficient in creating responsive and interactive websites, backed by coursework, project and certifications.</p>
                         </div>
-                        <div class="flex items-start gap-4 p-4 rounded-xl hover:bg-zinc-900/50 transition-colors">
-                            <div class="w-1.5 h-1.5 rounded-full bg-emerald-500 mt-2 flex-shrink-0 shadow-[0_0_8px_rgba(16,185,129,0.8)]"></div>
-                            <p class="text-zinc-300 leading-relaxed text-sm md:text-base"><b class="text-zinc-100">Java Programming (Basic):</b> Developing foundational knowledge of object-oriented programming through coursework.</p>
+                        <div class="flex items-start gap-4 p-4 rounded-xl bg-white/40 border border-transparent hover:border-lavender-shade1 hover:bg-white/80 transition-all duration-300 shadow-sm">
+                            <div class="w-2 h-2 rounded-full bg-lavender-accent mt-1.5 flex-shrink-0 shadow-[0_0_6px_rgba(136,132,255,0.6)]"></div>
+                            <p class="text-lavender-text leading-relaxed text-sm md:text-base font-medium"><b class="font-extrabold text-lavender-text">Java Programming (Basic):</b> Developing foundational knowledge of object-oriented programming through coursework.</p>
                         </div>
-                        <div class="flex items-start gap-4 p-4 rounded-xl hover:bg-zinc-900/50 transition-colors">
-                            <div class="w-1.5 h-1.5 rounded-full bg-emerald-500 mt-2 flex-shrink-0 shadow-[0_0_8px_rgba(16,185,129,0.8)]"></div>
-                            <p class="text-zinc-300 leading-relaxed text-sm md:text-base"><b class="text-zinc-100">Python Programming:</b> Certified in Python with practical knowledge of writing efficient and readable code.</p>
+                        <div class="flex items-start gap-4 p-4 rounded-xl bg-white/40 border border-transparent hover:border-lavender-shade1 hover:bg-white/80 transition-all duration-300 shadow-sm">
+                            <div class="w-2 h-2 rounded-full bg-lavender-accent mt-1.5 flex-shrink-0 shadow-[0_0_6px_rgba(136,132,255,0.6)]"></div>
+                            <p class="text-lavender-text leading-relaxed text-sm md:text-base font-medium"><b class="font-extrabold text-lavender-text">Python Programming:</b> Certified in Python with practical knowledge of writing efficient and readable code.</p>
                         </div>
-                        <div class="flex items-start gap-4 p-4 rounded-xl hover:bg-zinc-900/50 transition-colors">
-                            <div class="w-1.5 h-1.5 rounded-full bg-emerald-500 mt-2 flex-shrink-0 shadow-[0_0_8px_rgba(16,185,129,0.8)]"></div>
-                            <p class="text-zinc-300 leading-relaxed text-sm md:text-base"><b class="text-zinc-100">Networking Fundamentals:</b> Gained through Cisco’s CCNAv7 certifications, covering network architecture and protocols.</p>
+                        <div class="flex items-start gap-4 p-4 rounded-xl bg-white/40 border border-transparent hover:border-lavender-shade1 hover:bg-white/80 transition-all duration-300 shadow-sm">
+                            <div class="w-2 h-2 rounded-full bg-lavender-accent mt-1.5 flex-shrink-0 shadow-[0_0_6px_rgba(136,132,255,0.6)]"></div>
+                            <p class="text-lavender-text leading-relaxed text-sm md:text-base font-medium"><b class="font-extrabold text-lavender-text">Networking Fundamentals:</b> Gained through Cisco’s CCNAv7 certifications, covering network architecture and protocols.</p>
                         </div>
-                        <div class="flex items-start gap-4 p-4 rounded-xl hover:bg-zinc-900/50 transition-colors">
-                            <div class="w-1.5 h-1.5 rounded-full bg-emerald-500 mt-2 flex-shrink-0 shadow-[0_0_8px_rgba(16,185,129,0.8)]"></div>
-                            <p class="text-zinc-300 leading-relaxed text-sm md:text-base"><b class="text-zinc-100">PC Hardware and Software Troubleshooting:</b> Learned through Cisco IT Essentials, with hands-on skills in diagnosing and repairing systems.</p>
+                        <div class="flex items-start gap-4 p-4 rounded-xl bg-white/40 border border-transparent hover:border-lavender-shade1 hover:bg-white/80 transition-all duration-300 shadow-sm">
+                            <div class="w-2 h-2 rounded-full bg-lavender-accent mt-1.5 flex-shrink-0 shadow-[0_0_6px_rgba(136,132,255,0.6)]"></div>
+                            <p class="text-lavender-text leading-relaxed text-sm md:text-base font-medium"><b class="font-extrabold text-lavender-text">PC Hardware and Software Troubleshooting:</b> Learned through Cisco IT Essentials, with hands-on skills in diagnosing and repairing systems.</p>
                         </div>
-                        <div class="flex items-start gap-4 p-4 rounded-xl hover:bg-zinc-900/50 transition-colors">
-                            <div class="w-1.5 h-1.5 rounded-full bg-emerald-500 mt-2 flex-shrink-0 shadow-[0_0_8px_rgba(16,185,129,0.8)]"></div>
-                            <p class="text-zinc-300 leading-relaxed text-sm md:text-base"><b class="text-zinc-100">Switching, Routing, and Wireless Essentials:</b> Acquired through Cisco CCNAv7 training, focusing on network configurations and connectivity.</p>
+                        <div class="flex items-start gap-4 p-4 rounded-xl bg-white/40 border border-transparent hover:border-lavender-shade1 hover:bg-white/80 transition-all duration-300 shadow-sm">
+                            <div class="w-2 h-2 rounded-full bg-lavender-accent mt-1.5 flex-shrink-0 shadow-[0_0_6px_rgba(136,132,255,0.6)]"></div>
+                            <p class="text-lavender-text leading-relaxed text-sm md:text-base font-medium"><b class="font-extrabold text-lavender-text">Switching, Routing, and Wireless Essentials:</b> Acquired through Cisco CCNAv7 training, focusing on network configurations and connectivity.</p>
                         </div>
-                        <div class="flex items-start gap-4 p-4 rounded-xl hover:bg-zinc-900/50 transition-colors">
-                            <div class="w-1.5 h-1.5 rounded-full bg-emerald-500 mt-2 flex-shrink-0 shadow-[0_0_8px_rgba(16,185,129,0.8)]"></div>
-                            <p class="text-zinc-300 leading-relaxed text-sm md:text-base"><b class="text-zinc-100">Adaptability and Eagerness to Learn:</b> Constantly learning new technologies and seeking opportunities to improve technical expertise.</p>
+                        <div class="flex items-start gap-4 p-4 rounded-xl bg-white/40 border border-transparent hover:border-lavender-shade1 hover:bg-white/80 transition-all duration-300 shadow-sm">
+                            <div class="w-2 h-2 rounded-full bg-lavender-accent mt-1.5 flex-shrink-0 shadow-[0_0_6px_rgba(136,132,255,0.6)]"></div>
+                            <p class="text-lavender-text leading-relaxed text-sm md:text-base font-medium"><b class="font-extrabold text-lavender-text">Adaptability and Eagerness to Learn:</b> Constantly learning new technologies and seeking opportunities to improve technical expertise.</p>
                         </div>
-                        <div class="flex items-start gap-4 p-4 rounded-xl hover:bg-zinc-900/50 transition-colors">
-                            <div class="w-1.5 h-1.5 rounded-full bg-emerald-500 mt-2 flex-shrink-0 shadow-[0_0_8px_rgba(16,185,129,0.8)]"></div>
-                            <p class="text-zinc-300 leading-relaxed text-sm md:text-base"><b class="text-zinc-100">Communication and Interpersonal Skills:</b> Strong written and verbal skills developed through teamwork, presentations, and group projects ensuring mutual trust and respect.</p>
+                        <div class="flex items-start gap-4 p-4 rounded-xl bg-white/40 border border-transparent hover:border-lavender-shade1 hover:bg-white/80 transition-all duration-300 shadow-sm">
+                            <div class="w-2 h-2 rounded-full bg-lavender-accent mt-1.5 flex-shrink-0 shadow-[0_0_6px_rgba(136,132,255,0.6)]"></div>
+                            <p class="text-lavender-text leading-relaxed text-sm md:text-base font-medium"><b class="font-extrabold text-lavender-text">Communication and Interpersonal Skills:</b> Strong written and verbal skills developed through teamwork, presentations, and group projects ensuring mutual trust and respect.</p>
                         </div>
                     </div>
                 </div>
             </section>
 
-            <hr class="border-zinc-800/50">
+            <hr class="border-lavender-shade2">
 
             <!-- PROJECTS -->
             <section id="projects" class="fade-in">
-                <h1 class="text-3xl font-bold text-zinc-100 mb-10 flex items-center gap-3">
-                    <span class="w-8 h-[2px] bg-emerald-500 block"></span> Projects
+                <h1 class="text-3xl font-extrabold text-lavender-text mb-10 flex items-center gap-3">
+                    <span class="w-8 h-[3px] bg-lavender-accent block rounded-full"></span> Projects
                 </h1>
 
                 <div class="projects-card grid grid-cols-1 md:grid-cols-2 gap-8">
                     
                     <!-- Project 1 -->
-                    <div class="project-container bg-zinc-900/40 border border-zinc-800 rounded-2xl overflow-hidden hover:border-emerald-500/50 hover:shadow-[0_0_30px_rgba(16,185,129,0.05)] transition-all duration-500 flex flex-col group">
-                        <div class="h-2 bg-gradient-to-r from-emerald-500 to-indigo-500 opacity-70 group-hover:opacity-100 transition-opacity"></div>
+                    <div class="project-container bg-white/60 border border-lavender-shade2 rounded-3xl overflow-hidden hover:border-lavender-accent hover:shadow-md transition-all duration-500 flex flex-col group shadow-sm">
+                        <div class="h-2 bg-gradient-to-r from-lavender-shade1 to-lavender-accent opacity-80 group-hover:opacity-100 transition-opacity"></div>
                         <div class="p-8 flex-1 flex flex-col">
                             <div class="project-details flex-1">
-                                <h3 class="text-xl font-bold text-zinc-100 mb-4 group-hover:text-emerald-400 transition-colors">Resume Portfolio Website</h3>
+                                <h3 class="text-2xl font-bold text-lavender-text mb-4 group-hover:text-lavender-accent transition-colors">Resume Portfolio Website</h3>
                                 
-                                <div class="text-zinc-400 text-sm space-y-4 mb-6">
+                                <div class="text-lavender-text font-medium text-sm space-y-4 mb-6">
                                     <ul class="list-disc list-inside space-y-2">
                                         <li>Implemented HTML and CSS to create an engaging user experience.</li>
                                         <li>Designed and developed a responsive website to showcase professional achievements.</li>
@@ -334,30 +368,30 @@
                                     </ul>
                                 </div>
                                 <div class="mb-8 flex items-center gap-2 flex-wrap">
-                                    <span class="px-3 py-1 bg-zinc-800 text-zinc-300 rounded-full text-xs font-medium border border-zinc-700/50">HTML</span>
-                                    <span class="px-3 py-1 bg-zinc-800 text-zinc-300 rounded-full text-xs font-medium border border-zinc-700/50">CSS</span>
+                                    <span class="px-3 py-1 bg-lavender-shade2/40 text-lavender-text rounded-full text-xs font-bold border border-lavender-shade1">HTML</span>
+                                    <span class="px-3 py-1 bg-lavender-shade2/40 text-lavender-text rounded-full text-xs font-bold border border-lavender-shade1">CSS</span>
                                 </div>
                             </div>
             
                             <div class="view-download-project flex gap-4 mt-auto">
                                 <a href="https://mpumelelo083.github.io/Resume-Website/" target="_blank" class="flex-1">
-                                    <button class="w-full bg-emerald-500/10 text-emerald-400 border border-emerald-500/20 hover:bg-emerald-500 hover:text-zinc-950 font-medium py-2.5 rounded-lg transition-all duration-300 text-sm">View Project</button>
+                                    <button class="w-full bg-lavender-accent/10 text-lavender-accent border border-lavender-accent/30 hover:bg-lavender-accent hover:text-white font-bold py-3 rounded-xl transition-all duration-300 text-sm shadow-sm">View Project</button>
                                 </a>
                                 <a href="https://github.com/Mpumelelo083/Resume-Website" target="_blank" class="flex-1">
-                                    <button class="w-full bg-zinc-800 text-zinc-300 border border-zinc-700 hover:bg-zinc-700 hover:text-white font-medium py-2.5 rounded-lg transition-all duration-300 text-sm">View Repository</button>
+                                    <button class="w-full bg-white text-lavender-text border border-lavender-shade1 hover:bg-lavender-shade2/50 hover:border-lavender-accent font-bold py-3 rounded-xl transition-all duration-300 text-sm shadow-sm">View Repository</button>
                                 </a>
                             </div>
                         </div>
                     </div>
     
                     <!-- Project 2 -->
-                    <div class="project-container bg-zinc-900/40 border border-zinc-800 rounded-2xl overflow-hidden hover:border-emerald-500/50 hover:shadow-[0_0_30px_rgba(16,185,129,0.05)] transition-all duration-500 flex flex-col group">
-                        <div class="h-2 bg-gradient-to-r from-emerald-500 to-indigo-500 opacity-70 group-hover:opacity-100 transition-opacity"></div>
+                    <div class="project-container bg-white/60 border border-lavender-shade2 rounded-3xl overflow-hidden hover:border-lavender-accent hover:shadow-md transition-all duration-500 flex flex-col group shadow-sm">
+                        <div class="h-2 bg-gradient-to-r from-lavender-shade1 to-lavender-accent opacity-80 group-hover:opacity-100 transition-opacity"></div>
                         <div class="p-8 flex-1 flex flex-col">
                             <div class="project-details flex-1">
-                                <h3 class="text-xl font-bold text-zinc-100 mb-4 group-hover:text-emerald-400 transition-colors">Mpumelelo Ndumo Resume / CV Website</h3>
+                                <h3 class="text-2xl font-bold text-lavender-text mb-4 group-hover:text-lavender-accent transition-colors">Mpumelelo Ndumo Resume / CV Website</h3>
                                 
-                                <div class="text-zinc-400 text-sm space-y-4 mb-6">
+                                <div class="text-lavender-text font-medium text-sm space-y-4 mb-6">
                                     <ul class="list-disc list-inside space-y-2">
                                         <li>Implemented HTML, CSS and JavaScript to create an engaging user experience.</li>
                                         <li>Designed and developed a responsive website to showcase professional achievements.</li>
@@ -365,18 +399,18 @@
                                     </ul>
                                 </div>
                                 <div class="mb-8 flex items-center gap-2 flex-wrap">
-                                    <span class="px-3 py-1 bg-zinc-800 text-zinc-300 rounded-full text-xs font-medium border border-zinc-700/50">HTML</span>
-                                    <span class="px-3 py-1 bg-zinc-800 text-zinc-300 rounded-full text-xs font-medium border border-zinc-700/50">CSS</span>
-                                    <span class="px-3 py-1 bg-zinc-800 text-zinc-300 rounded-full text-xs font-medium border border-zinc-700/50">JavaScript</span>
+                                    <span class="px-3 py-1 bg-lavender-shade2/40 text-lavender-text rounded-full text-xs font-bold border border-lavender-shade1">HTML</span>
+                                    <span class="px-3 py-1 bg-lavender-shade2/40 text-lavender-text rounded-full text-xs font-bold border border-lavender-shade1">CSS</span>
+                                    <span class="px-3 py-1 bg-lavender-shade2/40 text-lavender-text rounded-full text-xs font-bold border border-lavender-shade1">JavaScript</span>
                                 </div>
                             </div>
             
                             <div class="view-download-project flex gap-4 mt-auto">
                                 <a href="https://mpumelelo083.github.io/Mpumelelo-Ndumo-Resume-CV-Website/" target="_blank" class="flex-1">
-                                    <button class="w-full bg-emerald-500/10 text-emerald-400 border border-emerald-500/20 hover:bg-emerald-500 hover:text-zinc-950 font-medium py-2.5 rounded-lg transition-all duration-300 text-sm">View Project</button>
+                                    <button class="w-full bg-lavender-accent/10 text-lavender-accent border border-lavender-accent/30 hover:bg-lavender-accent hover:text-white font-bold py-3 rounded-xl transition-all duration-300 text-sm shadow-sm">View Project</button>
                                 </a>
                                 <a href="https://github.com/Mpumelelo083/Mpumelelo-Ndumo-Resume-CV-Website" target="_blank" class="flex-1">
-                                    <button class="w-full bg-zinc-800 text-zinc-300 border border-zinc-700 hover:bg-zinc-700 hover:text-white font-medium py-2.5 rounded-lg transition-all duration-300 text-sm">View Repository</button>
+                                    <button class="w-full bg-white text-lavender-text border border-lavender-shade1 hover:bg-lavender-shade2/50 hover:border-lavender-accent font-bold py-3 rounded-xl transition-all duration-300 text-sm shadow-sm">View Repository</button>
                                 </a>
                             </div>
                         </div>
